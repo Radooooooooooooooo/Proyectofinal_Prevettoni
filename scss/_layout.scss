@@ -8,6 +8,33 @@ body {
         @include mixins.flex-center;
         justify-content: space-between;
         padding:2rem;
+
+        input {
+            width:10rem;
+            height:2rem;
+            @include mixins.border-radius;
+            padding: 1rem;
+        }
+
+        .header__form {
+            background-color:variables.$secondary-color;
+            width:20%;
+            height:4rem;
+            border-radius:2rem;
+
+            input {
+                font-size:15px;
+                flex:1; //en el caso de que en media query NO complete el ancho del form
+                background-color:transparent;
+                outline:0;//saca la linea al seleccionar el input
+            }
+
+            button {
+                background-color:transparent;
+                border:0;
+                height:4rem;
+            }
+        }
     }
 
     header h1 {
@@ -21,21 +48,24 @@ body {
         display:flex;
         gap: 5rem;
         margin:1rem;
+        padding: 2rem;
     }
 
     .body__banner img {
         display: block;
         margin-left: auto;
         margin-right: auto;
+        width:100%;
     }
 
     .body__main {
         margin-top: 3rem;
         margin-left: 1rem;
     }
-    
+
     .body__h2 h2 {
         text-align: center;
+        margin-top:1rem;
     }
 }
 
