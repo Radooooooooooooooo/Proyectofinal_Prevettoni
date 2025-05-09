@@ -1,0 +1,17 @@
+@use "variables";
+
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:variables.$font-stack;
+    background-color:variables.$secondary-color;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+

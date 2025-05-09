@@ -1,0 +1,54 @@
+@use "variables";
+@use "mixins";
+
+body {
+    @include mixins.theme;
+
+    header {
+        @include mixins.flex-center;
+        justify-content: space-between;
+        padding:2rem;
+    }
+
+    header h1 {
+        position:absolute;
+        left:50%;
+        transform: translateX(-50%);
+        margin:0;
+    }
+
+    .body__nav {
+        display:flex;
+        gap: 5rem;
+        margin:1rem;
+    }
+
+    .body__banner img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .body__main {
+        margin-top: 3rem;
+        margin-left: 1rem;
+    }
+    
+    .body__h2 h2 {
+        text-align: center;
+    }
+}
+
+.main__container {
+    display: grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:1rem;
+    padding:1.25rem;
+}
+
+.container__item {
+    background-color:variables.$primary-color;
+    color:white;
+    padding:3rem;
+    @include mixins.border-radius
+}

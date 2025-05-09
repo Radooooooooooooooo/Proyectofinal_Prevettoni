@@ -1,0 +1,28 @@
+@use "variables";
+
+@mixin flex-center {
+    display:flex;
+    align-items:center;
+    text-align:center;
+}
+
+@mixin theme {
+    @if variables.$theme == light{
+        background-color:#ffffff;
+        color:#000000;
+    }
+    @else if variables.$theme == dark{
+        background-color:#000000;
+        color:#ffffff;
+        .container__item{
+            background-color:#ffffff;
+            color: #000000;
+        }
+    }
+}
+
+@mixin border-radius {
+    border:1rem;
+    border-radius:2rem;
+    border-color: #ff0000;
+}
