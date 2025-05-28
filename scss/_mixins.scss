@@ -21,8 +21,16 @@
     }
 }
 
-@mixin border-radius {
-    border:1rem;
+@mixin border-style {
+    border:3px solid #4f6d7a;
     border-radius:2rem;
-    border-color: #ff0000;
+}
+
+@mixin border-radius { //este mixin nunca lo uso de manera directa si no que lo incuyo en el mixin de arriba
+    border-radius:2rem;
+}
+
+@mixin radial-gradient {
+    background-image:radial-gradient(circle, #000000,variables.$primary-color);
+    color:variables.$secondary-color;
 }

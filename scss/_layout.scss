@@ -3,36 +3,40 @@
 
 body {
     @include mixins.theme;
+    @include mixins.radial-gradient;
 
     header {
         @include mixins.flex-center;
+        @include mixins.radial-gradient;
+        border:2px solid #4f6d7a;
+        color:variables.$text-color;
         justify-content: space-between;
         padding:2rem;
 
-        input {
-            width:10rem;
-            height:2rem;
-            @include mixins.border-radius;
-            padding: 1rem;
-        }
-
         .header__form {
-            background-color:variables.$secondary-color;
-            width:20%;
-            height:4rem;
-            border-radius:2rem;
+            display: flex; 
+            align-items: center;
+            background-color: variables.$secondary-color;
+            width: 20%;
+            height: 4rem;
+            @include mixins.border-style;
 
             input {
                 font-size:15px;
-                flex:1; //en el caso de que en media query NO complete el ancho del form
+                flex:1;
                 background-color:transparent;
-                outline:0;//saca la linea al seleccionar el input
+                outline:0;
+                width:10rem;
+                height:2rem;
+                padding: 1rem;
+                border: none;
             }
 
             button {
                 background-color:transparent;
                 border:0;
                 height:4rem;
+                padding: 1rem;
             }
         }
     }
@@ -49,6 +53,9 @@ body {
         gap: 5rem;
         margin:1rem;
         padding: 2rem;
+        @include mixins.radial-gradient;
+        @include mixins.border-style;
+        color:variables.$text-color;
     }
 
     .body__banner img {
@@ -56,6 +63,7 @@ body {
         margin-left: auto;
         margin-right: auto;
         width:100%;
+        max-width:90%;
     }
 
     .body__main {
@@ -80,5 +88,5 @@ body {
     background-color:variables.$primary-color;
     color:white;
     padding:3rem;
-    @include mixins.border-radius
+    @include mixins.border-style;
 }
