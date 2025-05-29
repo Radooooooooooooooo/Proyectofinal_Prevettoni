@@ -24,5 +24,10 @@ body{
 a {
     text-decoration: none;
     color: inherit;
+
+    &:hover{
+        color:#0000ff;
+        text-decoration: underline;
+    }
 }
 

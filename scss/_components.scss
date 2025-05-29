@@ -1,0 +1,41 @@
+@use "variables";
+@use "mixins";
+
+@each $nombre in variables.$botones {
+    $index: index(variables.$botones, $nombre);
+    .btn-#{$index} {
+    background-image: url('../assets/btn/#{$nombre}');
+    background-size: cover;
+    background-position: center;
+    width: 200px;
+    height: 200px;
+    @include mixins.border-style;
+    @include mixins.flex-center;
+    color:#ffffff;
+    font-weight:900;
+    margin: 0.5rem;
+    cursor: pointer;
+    }
+}
+
+.boton {
+    padding:3rem;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    height:200px;
+    width:200px;
+    transition: transform 0.2s ease;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+@each $color in variables.$btn-colors {
+    $index: index(variables.$btn-colors, $color);
+    .btn#{$index} {
+        background-color: $color;
+    }
+}
