@@ -329,3 +329,58 @@ body .body__h2 h2 {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+@media (max-width:992px){
+  .contacto-header {
+    padding: 5rem;
+  }
+}
+
+
+@media (max-width: 768px) {
+  header {
+    width:100%;
+  }
+
+  form.header__form {
+    display: none !important;
+  }
+  .main__container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width:600px;
+  }
+  .header-importados {
+    padding:5rem;
+  }
+  .importados_container {
+    display:grid;
+    grid-template-columns:2fr;
+    grid-template-rows:auto;
+    grid-template-areas:"btn-1 btn-2"
+                        "btn-3 btn-4"
+                        "btn-5 btn-6";
+  }
+  .btn-1 {
+    grid-area: btn-1;
+  }
+  .btn-2 {
+    grid-area: btn-2;
+  }
+  .btn-3 {
+    grid-area: btn-3;
+  }
+  .btn-4 {
+    grid-area: btn-4;
+  }
+  .btn-5 {
+    grid-area: btn-5;
+  }
+  .btn-6 {
+    grid-area: btn-6;
+  }
+  .contacto-header {
+    padding: 5rem;
+  }
+}
