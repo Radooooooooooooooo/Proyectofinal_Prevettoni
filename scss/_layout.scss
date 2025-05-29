@@ -89,9 +89,37 @@ body {
     color:white;
     padding:3rem;
     @include mixins.border-style;
+
+    &:hover {
+        transform: scale(1.1);
+    }
 }
 
 .importados_container {
     display: flex;
     flex-direction:row;
+}
+
+.contacto-container {
+    display: flex;
+    flex-direction: row;
+    background-image:url(../assets/contacto/WhatsApp.svg.webp);
+    width:200px;
+    height:200px;
+}
+
+.main-contacto {
+    @include mixins.flex-center;
+    justify-content:center;
+    section{
+        margin-top:3rem;
+        article{
+            a{
+                img{
+                    width:200px;
+                    height:200px;
+                }
+            }
+        }
+    }
 }
